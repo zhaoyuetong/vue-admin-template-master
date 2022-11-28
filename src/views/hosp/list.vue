@@ -52,6 +52,9 @@
                         @click="updateStatus(scope.row.id, 0)">下线</el-button>
                     <el-button v-if="scope.row.status == 0" type="danger" size="mini"
                         @click="updateStatus(scope.row.id, 1)">上线</el-button>
+                    <router-link :to="'/hospSet/hospital/show/' + scope.row.id">
+                        <el-button type="primary" size="mini">查看</el-button>
+                    </router-link>
                 </template>
             </el-table-column>
         </el-table>
