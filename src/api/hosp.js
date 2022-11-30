@@ -30,6 +30,11 @@ export default {
             url: `/admin/hosp/hospital/showHospDetail/${id}`,
             method: 'get'
         })
+    },
+    getDeptByHoscode(hoscode) {
+        return request({
+            url: `/admin/hosp/department/getDeptList/${hoscode}`,
+            method: 'get'
+        })
     }
-
 }
